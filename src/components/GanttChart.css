@@ -1,0 +1,266 @@
+.gantt-container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.gantt-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 16px;
+  padding: 16px;
+  background: #1a1a2e;
+  border-radius: 8px;
+}
+
+.search-box input {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #333;
+  border-radius: 6px;
+  background: #0f0f23;
+  color: #e0e0e0;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.search-box input::placeholder {
+  color: #666;
+}
+
+.search-box input:focus {
+  outline: none;
+  border-color: #6366f1;
+}
+
+.category-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.category-btn {
+  padding: 4px 12px;
+  border: 2px solid var(--cat-color, #555);
+  border-radius: 16px;
+  background: transparent;
+  color: #ccc;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.category-btn:hover {
+  background: color-mix(in srgb, var(--cat-color, #555) 20%, transparent);
+}
+
+.category-btn.active {
+  background: var(--cat-color, #555);
+  color: #fff;
+}
+
+.category-btn.reset {
+  border-color: #666;
+  color: #999;
+}
+
+.category-btn.reset:hover {
+  background: #333;
+}
+
+.zoom-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.zoom-btn {
+  padding: 4px 10px;
+  border: 1px solid #444;
+  border-radius: 4px;
+  background: transparent;
+  color: #aaa;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.zoom-btn:hover {
+  background: #333;
+}
+
+.zoom-btn.active {
+  background: #6366f1;
+  border-color: #6366f1;
+  color: #fff;
+}
+
+.gantt-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+  padding: 0 4px;
+}
+
+.item-count {
+  font-size: 13px;
+  color: #888;
+}
+
+.gantt-chart {
+  background: #0f0f23;
+  border-radius: 8px;
+  overflow-x: auto;
+  border: 1px solid #222;
+}
+
+.gantt-header {
+  display: flex;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: #16162a;
+  border-bottom: 1px solid #333;
+  min-height: 32px;
+}
+
+.gantt-label-col {
+  min-width: 200px;
+  max-width: 200px;
+  padding: 6px 10px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: #ccc;
+  flex-shrink: 0;
+}
+
+.gantt-timeline-col {
+  flex: 1;
+  position: relative;
+  min-width: 800px;
+}
+
+.year-marker {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  border-left: 1px solid #252540;
+  pointer-events: none;
+}
+
+.year-label {
+  position: absolute;
+  top: 8px;
+  left: 4px;
+  font-size: 11px;
+  color: #666;
+  white-space: nowrap;
+}
+
+.gantt-body {
+  position: relative;
+}
+
+.gantt-row {
+  display: flex;
+  border-bottom: 1px solid #1a1a30;
+  min-height: 28px;
+}
+
+.gantt-row:hover {
+  background: #1a1a35;
+}
+
+.gantt-row .gantt-timeline-col {
+  position: relative;
+}
+
+.category-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.item-title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.gantt-bar {
+  position: absolute;
+  top: 4px;
+  bottom: 4px;
+  border-radius: 3px;
+  opacity: 0.85;
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+
+.gantt-bar:hover {
+  opacity: 1;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.2);
+}
+
+.gantt-bar.ongoing {
+  border-right: 2px dashed rgba(255, 255, 255, 0.5);
+}
+
+.gantt-tooltip {
+  position: fixed;
+  z-index: 100;
+  padding: 10px 14px;
+  background: #1e1e3a;
+  border: 1px solid #444;
+  border-radius: 6px;
+  pointer-events: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  max-width: 280px;
+}
+
+.tooltip-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 4px;
+}
+
+.tooltip-period {
+  font-size: 12px;
+  color: #aaa;
+}
+
+.tooltip-category {
+  font-size: 11px;
+  color: #888;
+  margin-top: 2px;
+}
+
+.tooltip-desc {
+  font-size: 11px;
+  color: #999;
+  margin-top: 4px;
+  border-top: 1px solid #333;
+  padding-top: 4px;
+}
+
+@media (max-width: 768px) {
+  .gantt-label-col {
+    min-width: 140px;
+    max-width: 140px;
+    font-size: 11px;
+  }
+
+  .gantt-timeline-col {
+    min-width: 600px;
+  }
+
+  .gantt-controls {
+    padding: 12px;
+  }
+}
