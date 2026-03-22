@@ -20,9 +20,14 @@ const App = () => {
                 {user.displayName ?? 'User'} - ログアウト
               </button>
             ) : (
-              <button className="auth-button" onClick={login}>
-                ログイン
-              </button>
+              <div className="login-buttons">
+                <button className="auth-button" onClick={() => login('twitter')}>
+                  X でログイン
+                </button>
+                <button className="auth-button" onClick={() => login('google')}>
+                  Google でログイン
+                </button>
+              </div>
             )}
           </div>
         </div>
