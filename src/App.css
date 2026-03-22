@@ -8,7 +8,33 @@
 
 .app-header {
   padding: 24px 20px 16px;
-  text-align: center;
+}
+
+.header-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.auth-area {
+  position: absolute;
+  right: 0;
+}
+
+.auth-button {
+  padding: 0.3rem 0.8rem;
+  background: transparent;
+  border: 1px solid #555;
+  border-radius: 4px;
+  color: #aaa;
+  cursor: pointer;
+  font-size: 0.8rem;
+}
+
+.auth-button:hover {
+  border-color: #888;
+  color: #e0e0e0;
 }
 
 .app-header h1 {

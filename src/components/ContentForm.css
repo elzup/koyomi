@@ -1,0 +1,76 @@
+.content-form {
+  padding: 1rem;
+  background: #1a1a2e;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.form-row {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.form-row:last-child {
+  margin-bottom: 0;
+}
+
+.content-form input[type='text'] {
+  flex: 1;
+  min-width: 120px;
+  padding: 0.4rem 0.6rem;
+  background: #0f0f23;
+  border: 1px solid #333;
+  border-radius: 4px;
+  color: #e0e0e0;
+  font-size: 0.9rem;
+}
+
+.content-form input[type='number'] {
+  width: 5rem;
+  padding: 0.4rem 0.6rem;
+  background: #0f0f23;
+  border: 1px solid #333;
+  border-radius: 4px;
+  color: #e0e0e0;
+  font-size: 0.9rem;
+}
+
+.content-form select {
+  padding: 0.4rem 0.6rem;
+  background: #0f0f23;
+  border: 1px solid #333;
+  border-radius: 4px;
+  color: #e0e0e0;
+  font-size: 0.9rem;
+}
+
+.content-form label {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  color: #aaa;
+  font-size: 0.85rem;
+  white-space: nowrap;
+}
+
+.ongoing-label {
+  cursor: pointer;
+}
+
+.content-form button[type='submit'] {
+  padding: 0.4rem 1.2rem;
+  background: #6366f1;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.content-form button[type='submit']:hover {
+  background: #5558e6;
+}

@@ -1,10 +1,10 @@
 {
-  "name": "koyomi",
+  "name": "koyomict",
   "private": true,
   "version": "0.1.0",
   "type": "module",
   "scripts": {
-    "dev": "portless run --name koyomi vite",
+    "dev": "portless run --name koyomict vite",
     "build": "tsc -b && vite build",
     "lint": "oxlint",
     "preview": "vite preview",
@@ -12,6 +12,7 @@
     "test:run": "vitest run"
   },
   "dependencies": {
+    "firebase": "^12.11.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "react-router-dom": "^7.11.0"
