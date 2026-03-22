@@ -1,1 +1,6 @@
-{"projects":{"default":"koyomict"}}
+{
+  "projects": {
+    "default": "koyomict-dev",
+    "production": "koyomict"
+  }
+}
