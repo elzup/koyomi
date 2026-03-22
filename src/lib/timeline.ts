@@ -5,7 +5,7 @@ const CURRENT_YEAR = new Date().getFullYear()
 export const getContentEndYear = (item: ContentItem): number =>
   item.ongoing ? CURRENT_YEAR : (item.endYear ?? item.startYear)
 
-export const getContentEndMonth = (item: ContentItem): number =>
+const getContentEndMonth = (item: ContentItem): number =>
   item.ongoing ? 12 : (item.endMonth ?? item.startMonth ?? 1)
 
 export const getContentStartMonth = (item: ContentItem): number =>
